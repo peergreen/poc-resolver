@@ -16,8 +16,13 @@ public class VersionCapability implements Capability {
 	private Map<String, String> directives = new HashMap<String, String>();
 
 	
+	
+	private String name;
+	
+	
 	public VersionCapability(Resource resource, String name) {
 		this.resource= resource;
+		this.name = name;
 		attributes.put(ExecutionEnvironmentNamespace.CAPABILITY_VERSION_ATTRIBUTE, name);
 	}
 	
@@ -40,6 +45,11 @@ public class VersionCapability implements Capability {
 	@Override
 	public Resource getResource() {
 		return resource;
+	}
+	
+	
+	public String toString() {
+		return "VersionCapability[".concat(name).concat("]");
 	}
 
 	

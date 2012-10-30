@@ -71,10 +71,11 @@ public class TestResolver {
 	        
 	        List<Wire> requirements = wireMap.get(tomcatFeature);
 	        if (requirements.size() > 0 ) {
-	        Wire wire = requirements.get(0); 
+	        	for (Wire wire : requirements) {
+	        		System.out.println("Wire for Tomcat. For requirement " + wire.getRequirement() + " it is provided by " + wire.getProvider() + " with " + wire.getProvider().getCapabilities(wire.getRequirement().getNamespace()) );
+	        	}
 	        
 	        
-	        System.out.println("Wire for Tomcat. For requirement " + wire.getRequirement() + " it is provided by " + wire.getProvider() + "" );
 	        }
 
 				

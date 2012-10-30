@@ -24,7 +24,7 @@ public class VersionRequirement implements Requirement {
 		attributes.put(getNamespace(), name);
 		directives.put(
 				ExecutionEnvironmentNamespace.REQUIREMENT_FILTER_DIRECTIVE,
-                "(" + ExecutionEnvironmentNamespace.CAPABILITY_VERSION_ATTRIBUTE + "=" + name + ")");
+                "(" + ExecutionEnvironmentNamespace.CAPABILITY_VERSION_ATTRIBUTE + ">=" + name + ")");
 
 		
 		
